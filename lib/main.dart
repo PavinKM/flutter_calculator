@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
+
+  // double size = MediaQuery.of(context).size.width / 5;
 
   @override
   Widget build(BuildContext context) {
 
-    double size = MediaQuery.of(context).size.width / 5;
+    
 
     return MaterialApp(
       home: Scaffold(
@@ -22,77 +24,10 @@ class MainApp extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white54,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      margin: EdgeInsets.all(10),
-                      height: size,
-                      width: size,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "7",
-                        style: TextStyle(
-                          color:Colors.white,
-                          fontSize: 30
-                        ),
-                      )
-                    ),
-
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white54,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      margin: EdgeInsets.all(10),
-                      height: size,
-                      width: size,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "8",
-                        style: TextStyle(
-                          color:Colors.white,
-                          fontSize: 30
-                        ),
-                      )
-                    ),
-
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white54,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      margin: EdgeInsets.all(10),
-                      height: size,
-                      width: size,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "9",
-                        style: TextStyle(
-                          color:Colors.white,
-                          fontSize: 30
-                        ),
-                      )
-                    ),
-
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white54,
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      margin: EdgeInsets.all(10),
-                      height: size,
-                      width: size,
-                      alignment: Alignment.center,
-                      child: const Text(
-                        "/",
-                        style: TextStyle(
-                          color:Colors.white,
-                          fontSize: 30
-                        ),
-                      )
-                    )
+                    calcButton("7", Colors.white),
+                    calcButton("8", Colors.white),
+                    calcButton("9", Colors.white),
+                    calcButton("/", Colors.orange)
                   ],
                 )
               ],
@@ -103,4 +38,25 @@ class MainApp extends StatelessWidget {
       ),
     );
   }
+
+  Widget calcButton(String text, Color bgColor){
+    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white54,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      margin: EdgeInsets.all(10),
+                      // height: size,
+                      // width: size,
+                      alignment: Alignment.center,
+                      child: Text(
+                        text,
+                        style: TextStyle(
+                          color:bgColor,
+                          fontSize: 30
+                        ),
+                      )
+                    );
+  }
+
 }
