@@ -9,11 +9,97 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+
+    double size = MediaQuery.of(context).size.width / 5;
+
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        backgroundColor: Colors.black,
+        body: Column(
+          children: [
+            //line 1
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white54,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      margin: EdgeInsets.all(10),
+                      height: size,
+                      width: size,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "7",
+                        style: TextStyle(
+                          color:Colors.white,
+                          fontSize: 30
+                        ),
+                      )
+                    ),
+
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white54,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      margin: EdgeInsets.all(10),
+                      height: size,
+                      width: size,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "8",
+                        style: TextStyle(
+                          color:Colors.white,
+                          fontSize: 30
+                        ),
+                      )
+                    ),
+
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white54,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      margin: EdgeInsets.all(10),
+                      height: size,
+                      width: size,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "9",
+                        style: TextStyle(
+                          color:Colors.white,
+                          fontSize: 30
+                        ),
+                      )
+                    ),
+
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white54,
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      margin: EdgeInsets.all(10),
+                      height: size,
+                      width: size,
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "/",
+                        style: TextStyle(
+                          color:Colors.white,
+                          fontSize: 30
+                        ),
+                      )
+                    )
+                  ],
+                )
+              ],
+            ),
+
+          ],
+        )
       ),
     );
   }
